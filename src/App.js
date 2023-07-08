@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 
 import TopNav from './TopNav'
 import Count from './Count'
@@ -30,10 +29,10 @@ function App() {
     <>
       <TopNav />
       <Container>
-        <Row className='justify-content-center mt-5'>
-          <Count count={data.total_sats} />
+        <Row className='justify-content-center mt-2 text-center'>
+          <Count count={data.total_sats} numEntries={data.entries?.length}/>
         </Row>
-        <Row className="mt-5">
+        <Row className="mt-5 justify-content-center">
           <PledgeButton/>
         </Row>
         <Row className="mt-5">

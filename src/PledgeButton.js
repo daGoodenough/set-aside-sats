@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Modal, Form, InputGroup } from "react-bootstrap";
+import { Button, Col, Modal, Form, InputGroup } from "react-bootstrap";
 
 import postSheetRow from './utils/postSheetRow';
 
@@ -52,8 +52,10 @@ const PledgeButton = () => {
 
   return (
     <>
-      <Button onClick={handleShow}>Pledge</Button>
-      <Modal show={show} onHide={handleClose} centered>
+    <Col xs={12} sm={6} md={4} lg={3}>
+      <Button className="pledge-button" onClick={handleShow}>Pledge</Button>
+    </Col>
+      <Modal data-bs-theme="dark" show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Let's Show Them Your Pledge!</Modal.Title>
         </Modal.Header>
@@ -79,7 +81,7 @@ const PledgeButton = () => {
 
             </Form.Group>
 
-             <Form.Label>Amount Pledged*</Form.Label>
+             <Form.Label className="mt-4">Amount Pledged*</Form.Label>
             <InputGroup className="mb-3">
               <Form.Control
                 placeholder="10000"
@@ -102,11 +104,11 @@ const PledgeButton = () => {
               </Form.Group>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+        <Modal.Footer className="justify-content-between">
+          <Button variant="danger" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={(e) => handlePost(e)}>
+          <Button className="submit-btn" variant="primary" onClick={(e) => handlePost(e)}>
             Post Your Pledge
           </Button>
         </Modal.Footer>
