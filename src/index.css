@@ -2,6 +2,7 @@
   --primary-color: #f9b84c;
   --secondary-color: #234c73;
   --secondary-color-hover: #2e5981;
+  --background-color: #000000;
 }
 
 body {
@@ -9,7 +10,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2b3035;
+  background-color: var(--background-color);
   color: var(--primary-color);
 }
 
@@ -18,8 +19,12 @@ code {
     monospace;
 }
 
-.custom-navbar {
-  background-color: rgb(25, 5, 110);
+.navbar-brand {
+  width: 100%;
+}
+
+.bg-background {
+  background-color: var(--background-color);
 }
 
 .form-error {
@@ -40,7 +45,12 @@ span.pledge-count.count {
 }
 
 span.pledge-count {
-  font-size: 5rem;
+  font-size: 1.4rem;
+}
+
+.row.pledge-count {
+  background-color: #212529;
+  padding: 10px 0;
 }
 
 .btn-primary {
@@ -61,10 +71,29 @@ span.pledge-count {
 
 .pledge-button {
   width: 100%;
-  font-size: 2.2rem;
-  text-transform: uppercase;
+  font-size: 1.4rem;
+  /* text-transform: uppercase; */
 }
 
 .modal-content {
-  background-color: #2b3035;
+  background-color: #423e3e;
+}
+
+.mission1 {
+  font-size: 1.4rem;
+}
+
+h2.contributors {
+  font-weight: 600;
+}
+
+ol,
+p.mission {
+  font-size: 1.2rem;
+}
+
+.mission {
+  line-height: 2;
+  color: white;
+  letter-spacing: 2;
 }

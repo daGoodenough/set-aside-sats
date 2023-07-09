@@ -38,13 +38,15 @@ const PledgeButton = () => {
 
     const data = {
       name: name || "Satoshi",
-      date,
-      amount
+      date: date,
+      amount_sats: amount,
+      twitter: twitter || ""
     }
 
     try {
       const response = await postSheetRow(data);
       setShow(false);
+      window.location.reload()
     } catch (error) {
       console.warn(error);
     }
@@ -52,9 +54,7 @@ const PledgeButton = () => {
 
   return (
     <>
-    <Col xs={12} sm={6} md={4} lg={3}>
       <Button className="pledge-button" onClick={handleShow}>Pledge</Button>
-    </Col>
       <Modal data-bs-theme="dark" show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Let's Show Them Your Pledge!</Modal.Title>

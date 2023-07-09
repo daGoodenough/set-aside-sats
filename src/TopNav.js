@@ -3,12 +3,12 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function TopNav() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary custom-navbar" data-bs-theme="dark" sticky="top">
+    <Navbar className="bg-background" expand="lg" variant="dark" sticky="top">
       <Container fluid className='justify-content-center'>
         <Navbar.Brand href="#home" className='text-center'>
         <img
               src="/img/SVGLogo.svg"
-              width="60%"
+              width="75%"
               // height="auto"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
