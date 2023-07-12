@@ -10,6 +10,7 @@ import PledgesTable from './PledgesTable';
 import fetchSheetData from './utils/fetchSheetData';
 import Mission1 from './Mission1';
 import Mission2 from './Mission2';
+import Footer from './Footer';
 
 function App() {
   const [data, setData] = useState({});
@@ -17,8 +18,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetchSheetData();
-        // const response = { total_sats: 500, entries: [{ name: 'bob', date: '05/5/2', amount_sats: 25, twitter: 'da_goodenough' }, { name: 'bob', date: '05/5/2', amount_sats: 25 }] };
+        // const response = await fetchSheetData();
+        const response = { total_sats: 500, entries: [{ name: 'bob', date: '05/5/2', amount_sats: 25, twitter: 'da_goodenough' }, { name: 'bob', date: '05/5/2', amount_sats: 25 }] };
         setData(response);
       } catch (error) {
         console.warn(error);
@@ -49,6 +50,7 @@ function App() {
           <PledgesTable entries={data.entries} />
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 }
