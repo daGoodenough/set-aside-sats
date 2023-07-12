@@ -18,8 +18,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const response = await fetchSheetData();
-        const response = { total_sats: 500, entries: [{ name: 'bob', date: '05/5/2', amount_sats: 25, twitter: 'da_goodenough' }, { name: 'bob', date: '05/5/2', amount_sats: 25 }] };
+        const response = await fetchSheetData();
+        // const response = { total_sats: 500, entries: [{ name: 'bob', date: '05/5/2', amount_sats: 25, twitter: 'da_goodenough' }, { name: 'bob', date: '05/5/2', amount_sats: 25 }] };
         setData(response);
       } catch (error) {
         console.warn(error);
