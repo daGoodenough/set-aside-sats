@@ -8,10 +8,9 @@ function TopNav() {
         <Navbar.Brand href="#home" className='text-center'>
         <img
               src="/img/SVGLogo.svg"
-              width="75%"
-              // height="auto"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
+              width="100%"
+              className="d-inline-block align-top banner"
+              alt="Banner and logo"
             />
         </Navbar.Brand>
       </Container>

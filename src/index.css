@@ -107,3 +107,38 @@ p {
 p.donation {
   color: rgb(155, 139, 118);
 }
+
+@media (min-width: 576px) {
+  img.banner {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  img.banner {
+    width: 75%;
+    height: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  img.banner {
+    width: 50%;
+    height: auto;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Extra extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  img.banner {
+    width: 40%;
+    height: auto;
+  }
+}

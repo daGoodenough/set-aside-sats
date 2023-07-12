@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <>
 
-      <footer className='footer pt-3'>
+      <footer className='footer py-5 mt-5'>
         <Container fluid>
           <Row className='justify-content-around text-center'>
             <Col xs={12} sm={10} md={6} lg={4}>
@@ -64,13 +64,11 @@ const Footer = () => {
               </div>
             </Col>
           </Row>
-          <Row>
+          <Row className='justify-content-center'>
             <img
               src="/img/genz_logo_banner.jpeg"
-              width="75%"
-              // height="auto"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
+              className="d-inline-block align-top banner"
+              alt="GenZ4BTC logo and banner"
             />
           </Row>
         </Container>
