@@ -31,8 +31,8 @@ const Footer = () => {
 
       <footer className='footer pt-3'>
         <Container fluid>
-          <Row className='justify-content-between text-center'>
-            <Col xs={12} md={6} lg={4}>
+          <Row className='justify-content-around text-center'>
+            <Col xs={12} sm={10} md={6} lg={4}>
               <Row className='text-center'>
                 <Col xs={6}>
                   <img src='/img/donate_onchain.png' width="100%" />
@@ -49,14 +49,18 @@ const Footer = () => {
                 </p>
               </Row>
             </Col>
-            <Col className='d-flex align-items-center justify-content-center'>
+            <Col sm={12} md={3} className='d-flex align-items-center justify-content-center'>
               <div>
-                Twitter: <a href="https://twitter.com/genZ4btc" target='__blank__'>@genZ4btc</a>
+                <p>
+                  Twitter: <a href="https://twitter.com/genZ4btc" target='__blank__'>@genZ4btc</a>
+                </p>
               </div>
             </Col>
-            <Col className='d-flex align-items-center justify-content-center'>
+            <Col sm={12} md={3} className='d-flex align-items-center justify-content-center'>
               <div>
-                Website: <a href="https://genz4btc.com" target="__blank__">genz4btc.com</a>
+                <p>
+                  Website: <a href="https://genz4btc.com" target="__blank__">genz4btc.com</a>
+                </p>
               </div>
             </Col>
           </Row>
