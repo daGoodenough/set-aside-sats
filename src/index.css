@@ -56,6 +56,7 @@ span.pledge-count {
 .row.pledge-count {
   background-color: #212529;
   padding: 10px 0;
+  position: sticky;
 }
 
 .btn-primary {
