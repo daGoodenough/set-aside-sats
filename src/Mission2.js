@@ -6,8 +6,8 @@ const Mission2 = () => {
       <Col xs={12} md={6}>
         <ol className="mission">
           <li>
-            Create a new cold wallet address and label it with intent and purpose
-            Future kid 1 $25/
+            Create a new cold wallet address and label it with intent and purpose: <br/>
+            Future kid 1 $25 <br/>
             Future person 2 $50
           </li>
           <li>
