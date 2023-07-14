@@ -27,10 +27,12 @@ function App() {
   useEffect(() => {
     window.addEventListener('resize', handleResize);
 
-    handleResize(); // Initial setup
+    
+    const timeoutId = setTimeout(handleResize, 3000); // Initial setup
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      clearTimeout(timeoutId);
     };
   }, []);
 
