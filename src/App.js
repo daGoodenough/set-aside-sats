@@ -18,14 +18,16 @@ function App() {
   const pledgeRef = useRef(null);
 
   const handleResize = () => {
+    console.log("Resisize handled")
     const navbarHeight = topNavRef.current.getNavbarHeight();
+    console.log(navbarHeight)
     pledgeRef.current.style.top = `${navbarHeight - 3}px`;
   };
 
   useEffect(() => {
-    handleResize(); // Initial setup
-
     window.addEventListener('resize', handleResize);
+
+    handleResize(); // Initial setup
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -52,12 +54,10 @@ function App() {
         <Row className='text-center mt-3'>
           <Mission1 />
         </Row>
-        <Row ref={pledgeRef} className='align-items-center justify-content-center mt-2 text-center pledge-count'>
+        <Row ref={pledgeRef} style={{top: pledgeRef.current?.style.top}} className='align-items-center justify-content-center mt-2 text-center pledge-count'>
           <CountContainer count={data.total_sats} numEntries={data.entries?.length}/>
         </Row>
-        <Row className='justify-content-center mt-3'>
           <Mission2 />
-        </Row>
         <Row className="mt-5">
           <PledgesTable entries={data.entries} />
         </Row>
